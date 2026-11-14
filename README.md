@@ -11,6 +11,8 @@
 
 </div>
 
+<img src="docs/preview.jpg" alt="Tela de login do TrueHate" width="100%" />
+
 ## Sobre
 
 O **TrueHate** nasceu da ideia de dar voz a quem presencia um problema dentro de uma empresa ou instituição de ensino e não tem um canal seguro para relatar. A plataforma permite publicar denúncias **de forma anônima ou identificada**, avaliar empresas com nota de 1 a 5, comentar e responder a outros relatos.
