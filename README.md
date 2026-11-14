@@ -95,7 +95,7 @@ Por fim:
 python app.py
 ```
 
-A aplicação sobe em `http://127.0.0.1:5000`. O primeiro usuário criado com perfil **Administrador** já pode acessar o painel em `/admin`.
+A aplicação sobe em `http://127.0.0.1:5000`. Para moderar, defina `inadmin = 1` para o seu usuário no banco — o painel fica em `/admin`.
 
 ## Configuração
 
