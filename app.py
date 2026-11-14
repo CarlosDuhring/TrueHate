@@ -1,10 +1,19 @@
+import os
+
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from datetime import datetime
 import mysql.connector
 from mysql.connector import Error, IntegrityError
 
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass
+
 app = Flask(__name__)
-app.secret_key = 'segredo_super_importante'
+app.secret_key = os.environ.get("SECRET_KEY", "dev-troque-esta-chave")
 
 # ==============================
 # FUNÇÕES AUXILIARES
@@ -12,10 +21,10 @@ app.secret_key = 'segredo_super_importante'
 def conectar():
     try:
         return mysql.connector.connect(
-            host="tini.click",
-            user="true_hate_app",
-            password="5cce0bb5d17104cbc4e51ac1c737422f",
-            database="true_hate_app"
+            host=os.environ.get("DB_HOST", "localhost"),
+            user=os.environ.get("DB_USER", "root"),
+            password=os.environ.get("DB_PASS", ""),
+            database=os.environ.get("DB_NAME", "true_hate_app"),
         )
     except Error:
         return None
